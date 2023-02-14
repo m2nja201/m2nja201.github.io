@@ -11,14 +11,14 @@ exclude:
 # Site settings
 title: KEEP GOING !
 subtitle: "A simple yet classy theme for your Jekyll website or blog"
-email: m2nja201@gmail.com
-name: Won Minjae _ 원민재
+email: blcentra@gmail.com
+name: Ben Centra
 description: >
-  안녕하세요, 서버 개발자 '원민재'입니다 :)
+  A simple yet classy theme for your Jekyll website or blog.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "/m2nja201.github.io" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
