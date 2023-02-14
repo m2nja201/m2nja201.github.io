@@ -11,10 +11,10 @@ exclude:
 # Site settings
 title: KEEP GOING !
 subtitle: "A simple yet classy theme for your Jekyll website or blog"
-email: blcentra@gmail.com
+email: m2nja201@gmail.com
 name: m2nja201
 description: >
-  A simple yet classy theme for your Jekyll website or blog.
+  안녕하세요, 서버 개발자 원민재입니다 :)
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -76,47 +76,47 @@ descriptions:
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
 social:
-  - name: Twitter
-    icon: twitter
-    username: TheBenCentra
-    url: https://twitter.com/TheBenCentra
-    desc: Follow me on Twitter
-    share: true
+  ##- name: Twitter
+    ##icon: twitter
+    ##username: TheBenCentra
+    ##url: https://twitter.com/TheBenCentra
+    ##desc: Follow me on Twitter
+    ##share: true
 
-  - name: Facebook
-    icon: facebook
-    username: thebencentra
-    url: ""
-    desc: Friend me on Facebook
-    share: true
+  ##- name: Facebook
+    ##icon: facebook
+    ##username: thebencentra
+    ##url: ""
+    ##desc: Friend me on Facebook
+    ##share: true
 
   - name: GitHub
     icon: github
-    username: bencentra
-    url: https://github.com/bencentra
-    desc: Fork me on GitHub
+    username: m2nja201
+    url: https://github.com/m2nja201
+    desc: 깃허브
     share: false
 
-  - name: LinkedIn
-    icon: linkedin
-    username: Ben Centra
-    url: https://www.linkedin.com/pub/ben-centra/47/769/60a
-    desc: Connect with me on LinkedIn
-    share: true
+  ##- name: LinkedIn
+    ##icon: linkedin
+    ##username: Ben Centra
+    ##url: https://www.linkedin.com/pub/ben-centra/47/769/60a
+    ##desc: Connect with me on LinkedIn
+    ##share: true
 
-  - name: Google+
-    icon: google-plus
-    username: ""
-    url: ""
-    desc: Add me to your Circles
-    share: true
+  ##- name: Google+
+    ##icon: google-plus
+    ##username: ""
+    ##url: ""
+    ##desc: Add me to your Circles
+    ##share: true
 
-  - name: YouTube
-    icon: youtube
-    username: ""
-    url: ""
-    desc: Subscribe on YouTube
-    share: false
+  ##- name: YouTube
+    ##icon: youtube
+    ##username: ""
+    ##url: ""
+    ##desc: Subscribe on YouTube
+    ##share: false
 
   - name: Instagram
     icon: instagram
