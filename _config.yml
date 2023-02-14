@@ -10,12 +10,11 @@ exclude:
 
 # Site settings
 title: NOW OR NEVER
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
+subtitle: "안녕하세요, 서버 개발자 원민재입니다."
 email: m2nja201@gmail.com
 name: m2nja201
 description: >
-  안녕하세요, 
-  서버 개발자 원민재입니다 :)
+  저의 조각들을 모아둔 포트폴리오 블로그입니다.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
