@@ -88,7 +88,7 @@ main {
     }
     @media screen and (min-width: $mobileW + 1) {
       position: fixed;
-      max-width: 280px;
+      max-width: 300px;
     }
     min-width: $leftWidth;
     justify-content: center;
