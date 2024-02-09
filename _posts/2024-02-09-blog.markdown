@@ -19,3 +19,8 @@ categories: Setting
 마음대로 사용하고 싶어서 **GitHub 블로그**를 사용하게 되었다.
 
 ### Velog에 남겨둘 게시물
+- 42 Seoul Review
+- Web 관련 포스팅
+- 표준 C 라이브러리 구현
+
+혹시라도 위의 내용을 확인하실 분들이 있다면 [**요기**](https://velog.io/@m2nja201/posts)로 오세용 :)
