@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Blog 이전"
+title:  "Velog에서 GitHub Blog로 이전합니다!"
 date:   2024-02-09 20:07:36 +09:00
 categories: Setting
 ---

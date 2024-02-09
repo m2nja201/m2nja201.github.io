@@ -1,0 +1,105 @@
+---
+layout: post
+title:  "[openCV] Canny Edge Detection"
+date:   2023-07-07 20:07:36 +09:00
+categories: ComputerVision openCV
+---
+
+**Canny Edge Detection**이 무엇인지, 그에 대한 Edge 검출 단계, ``Canny`` 함수는 어떻게 활용하는지에 대한 내용을 포함하고 있습니다.
+
+<hr>
+<br>
+
+## 🌳 Canny Edge Detection이란
+인기 있는 **Edge 검출 알고리즘**으로 일반 Edge Detection에서 나타는 불분명한 Edge들 중 **실제 Edge**를 찾아 분명하게 나타내는 알고리즘이다.
+
+<br>
+
+## 👀 Edge 검출 단계
+Canny Edge Detection은 **다단계 알고리즘**으로 구성되어 있고, 그 과정은 다음과 같다.
+![](https://velog.velcdn.com/images/m2nja201/post/fc91060d-920a-4b38-b5c7-76f4f3d50b1c/image.png)
+
+<br>
+### 💡 1. Gaussian Filter를 통한 Smoothing (노이즈 제거)
+
+> #### 🔍 Image Gradient (이미지 그라디언트)
+**Gradient**는 기울기 및 변화하는 정도를 의미하기 때문에, **Image Gradient**는 가장 크게 변화하는 픽셀인 **Edge**를 의미한다.
+즉, **이미지의 Edge 검출**에 사용되고 식은 다음과 같다.
+![](https://velog.velcdn.com/images/m2nja201/post/fea7d6c8-cd00-4c3d-9899-929539f7e281/image.png)
+
+
+Gradient를 할 때 신호를 **미분**하게 되는데, 이때 신호와 더불어 **Noise**도 함께 **극대화** 될 것이다.
+![](https://velog.velcdn.com/images/m2nja201/post/f24a5887-c003-4997-ae7d-eaf1eb914322/image.png)
+
+그렇기 때문에 **노이즈를 없애주는 작업**을 해야하고, 이때 **Gaussian Filter**를 사용한다.
+
+[가우시안 필터가 궁금하다면 클릭 🌼](https://m2nja201.github.io/computervision/opencv/2023/07/07/gaussian-filter.html)
+
+
+<br>
+
+### 💡 2. Sobel Edge Detection
+노이즈가 제거된 이미지에서 **Sobel Edge Detection**을 통해 수평 방향, 수직 방향의 **Edge**를 검출한다.
+
+[Sobel 필터가 궁금하다면 클릭 🌼](https://m2nja201.github.io/computervision/opencv/2023/07/07/sobel-filter.html)
+
+
+<br>
+
+### 💡 3. Non-maximum Suppression (Thinning) 
+그 후 **선을 보다 명확하고 얇게** 나타내기 위해 **방향으로 최댓값을 갖는 픽셀만 남겨두고 나머지 값은 0으로 바꾸는** 과정을 거친다.
+![](https://velog.velcdn.com/images/m2nja201/post/d278a0ae-a362-40b3-9867-073c491b4153/image.png)
+
+위와 같은 사진에서 **q > p, r** 이면 다음 단계로 넘어가고, 그렇지 않다면 q의 픽셀 값을 0으로 바꾼다는 것이다.
+
+
+<br>
+
+### 💡 4. Hysteresis Thresholding
+**Thresholding 값 τ**를 기준으로 **τ보다 높은 값을 갖는 t에 해당되는 부분**을 **Edge**로 지정한다.
+![](https://velog.velcdn.com/images/m2nja201/post/038143b9-73de-4161-8367-c7a33cf9ed16/image.png)
+**(가)**는 **high threshold**보다 높기 때문에 **분명한 Edge**가 맞고,
+**(나)**는 **high threshold**보단 낮지만 **분명한 Edge인 (가)와 연결되어** 있으므로 **Edge**가 맞다.
+**(다)**는 high threshold보다 낮기 때문에 **Edge가 아니다**
+
+
+<br>
+
+## 🪄 Canny 함수와 사용 (C++)
+```cpp
+void Canny(
+	const CvArr* src, CvArr* dest, 
+    double low_threshold, double high_threshold, 
+    int aperture_size=3
+    )
+
+```
+- ``apreture_size``는 kernel의 크기를 의미한다.
+
+
+<br>
+
+### 사용 코드
+``` cpp
+// Canny Edge Detection
+	Mat example = imread("duck.jpg");
+	resize(example, example, Size(500, 300));
+
+	Mat canny[3];
+	Canny(example, canny[0], 50, 130);
+	Canny(example, canny[1], 150, 250);
+	Canny(example, canny[2], 260, 310);
+	for (int i = 0; i < 3; i++) {
+		imshow("Edge Detection " + to_string(i), canny[i]);
+		waitKey(0);
+	}
+```
+``canny[3]``라는 배열에 각각 다른 threshold 값으로 원본 이미지를 canny edge detection 해주어 저장했다.
+
+<br>
+
+![](https://velog.velcdn.com/images/m2nja201/post/f45712b4-a004-4aa1-9645-42b43e6ee459/image.png)
+
+- **임계값(low_th, high_th)**가 **``(50, 130)``**처럼 너무 낮은 경우, 불필요한 (불분명한) Edge들이 **너무 많이** 생기는 것을 볼 수 있다.
+- **``(150, 250)``**처럼 적당한 경우, 오리의 잔털을 경계로 Edge를 비교적 정확하게 찾아낸 것을 볼 수 있다.
+- **``(260, 310)``**처럼 너무 높은 경우, 필요한 Edge의 정보까지 **손실**될 수 있다.

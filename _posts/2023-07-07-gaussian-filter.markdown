@@ -7,6 +7,8 @@ categories: ComputerVision openCV
 
 가우시안 필터가 무엇인지, Gaussian Blur 함수는 어떻게 활용하는지, 블러링은 어떻게 하는지에 대한 게시글입니다.
 
+<hr><br>
+
 ## 🌳 Gaussian Filter (가우시안 필터)
 가우시안 분포 형태의 마스크로 **현재 화소와 가까울수록 가중치를 부여**한 mask를 사용하는 필터링 기법
 
@@ -17,6 +19,8 @@ categories: ComputerVision openCV
 
 <span style="display:inline-block; margin-top:-10px; padding-top : -10px; font-size:15px; color:gray; text-align:center; width:100vw">가우시안 분포 그래프</span>
 
+<br>
+
 ### 👍 Gaussian Filter의 좋은점 ( vs 평균값 필터)
 > #### **평균값 필터**란?
 주변 화소와의 **산술 평균값**으로 mask를 사용하는 필터링 기법
@@ -26,6 +30,8 @@ categories: ComputerVision openCV
 **gaussian filter**는
 - 멀리 있는 픽셀의 영향을 많이 받지 않는다.
 - 더 자연스러운 블러 효과를 얻을 수 있다.
+
+<br>
 
 ## 💻 openCV Gaussian Filter 사용
 ``` cpp
@@ -54,6 +60,8 @@ Mat myGaussianFilter(Mat img) {
 ```
 자체적으로 구현을 하여 사용할 수 있으나, 실사용에선 **``GaussainBlur`` 함수**를 사용하기에 함수 설명만 업로드 하였다! 
 
+<br>
+
 ### 📊 Gaussian Filter 적용 전과 후, histogram 비교
 <img src="https://velog.velcdn.com/images/m2nja201/post/20292ab9-96a1-4fb8-95af-1e78b1704f6b/image.png" style="
     margin-top: 10px;
@@ -63,6 +71,8 @@ Mat myGaussianFilter(Mat img) {
 <div style="margin-top:-10px; padding-top : -10px; font-size:15px; color:gray; text-align:center;">상단 : 이미지 원본 / 하단 : 가우시안 필터 적용 후</div>
 
 Gaussian Filter를 적용하면서 **히스토그램의 분포 균형**이 조금 더 개선되었다.
+
+<br>
 
 ### 💡 Sigma 값에 따른 Gaussian Blur 효과 정도 비교
 ``` cpp
@@ -84,6 +94,7 @@ Mat origin = imread("C:\\cv_img\\gear.jpg", 0);
 ">
 **sigma의 값**이 **커질**수록 **blur 효과**도 **커진다**는 것을 확인할 수 있다.
 
+<br>
 
 ### 🪄 Noise가 있는 이미지에 Gaussian Filter 적용
 <img src="https://velog.velcdn.com/images/m2nja201/post/02e6d64c-b966-47ed-97dd-bdd825df3a1d/image.png" style="
