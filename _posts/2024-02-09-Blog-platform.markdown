@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog 이전"
-date:   2024-02-09 20:07:36 +0530
+date:   2024-02-09 20:07:36 +09:00
 categories: Setting
 ---
 
