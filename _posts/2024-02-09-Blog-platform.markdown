@@ -6,7 +6,6 @@ categories: Setting
 ---
 
 기존에 사용하던 [**Velog**](https://velog.io/@m2nja201/posts)에서 **GitHub 블로그**로 이전하였다.
-
 블로그 플랫폼을 변경한 이유는 다음과 같다.
 
 ### Velog의 단점

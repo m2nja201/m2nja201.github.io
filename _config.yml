@@ -69,3 +69,7 @@ analytics:
   google:
     tracking_id          : "G-CDPMGWF2LF"
     anonymize_ip         : # true, false (default)
+
+navigation:
+    - title: ComputerVision
+      url: "/computer-vision"

@@ -247,7 +247,8 @@ main {
   padding-left: 100px;
 }
 .post {
-  font-family: "Merriweather", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  //font-family: "Merriweather", sans-serif;
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
@@ -271,6 +272,11 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
+
+.post-li {
+  padding-bottom: 5px;
+}
+
 .posts-labelgroup {
   margin: 0 0 0.67em 0;
   display: flex;
