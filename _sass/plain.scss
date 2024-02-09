@@ -1,6 +1,8 @@
 @import "ext/fonts";
 @import "ext/normalize";
 @import "syntax";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
 
 $linkColor: #0a59b0;
 $mobileW: 768px;
@@ -15,7 +17,8 @@ $leftWidth: 220px;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  //font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 1.2em;
   margin: 0;
