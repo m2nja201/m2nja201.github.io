@@ -2,9 +2,16 @@
 main:
   #- title: "Home"
   #  url: "/"
-  - title: "Introduce"
-    url: /about/
-  - title: "Category"
-    url: "/categories/"
-  - title: "Tags"
-    url: /tags/
+  - title: "ComputerVision"
+    children:
+    - title: "OpenCV"
+      url: /categories/computer-vision/open-cv
+      category: "OpenCV"
+  - title: "PaperReview"
+    children:  
+    - title: "MultiModal"
+      url: "/categories/paper-review/multi-modal"
+      category: "MultiModal"
+  - title: "Pages"
+    url: /categories/pages
+    category: "Pages"
