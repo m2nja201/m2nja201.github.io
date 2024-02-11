@@ -1,10 +1,6 @@
 ---
 title:  "Velog에서 GitHub Blog로 이전합니다!"
 
-categories: 
-	- Setting
-tags:
-    - Setting
 last_modified_at: 2024-02-09T20:07:36+09:00
 
 toc: true
