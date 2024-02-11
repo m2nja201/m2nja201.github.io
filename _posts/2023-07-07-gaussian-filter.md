@@ -1,17 +1,14 @@
 ---
 title:  "[openCV] Gaussian Filter로 Blurring(블러링) 하기"
-
+excerpt: "가우시안 필터가 무엇인지, Gaussian Blur 함수는 어떻게 활용하는지, 블러링은 어떻게 하는지에 대한 게시글입니다."
 categories: 
 	- ComputerVision
 tags:
 	- ComputerVision
 	- openCV
 last_modified_at: 2023-07-07 20:07:36 +09:00
+toc: true
 ---
-
-가우시안 필터가 무엇인지, Gaussian Blur 함수는 어떻게 활용하는지, 블러링은 어떻게 하는지에 대한 게시글입니다.
-
-<hr><br>
 
 ## 🌳 Gaussian Filter (가우시안 필터)
 가우시안 분포 형태의 마스크로 **현재 화소와 가까울수록 가중치를 부여**한 mask를 사용하는 필터링 기법
