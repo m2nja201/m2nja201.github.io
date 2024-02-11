@@ -10,6 +10,7 @@ toc_sticky: true
 ## 👀 Sobel Filter
 대표적인 **Edge 검출** 필터로, 
 일반적으로 **가로방향**과 **세로방향**에 대한 edge 검출을 각각 수행한 뒤, **절대값의 합의 평균**으로 합성하여 최종 edge 값을 구한다.
+
 ![](https://velog.velcdn.com/images/m2nja201/post/974ec86b-e8db-4027-a518-307242f41e3e/image.png)
 
 이때 **두 마스크의 합**이 **0이 되도록** 하면, 1로 정규화하는 과정은 필요 없다.
