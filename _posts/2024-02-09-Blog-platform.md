@@ -21,8 +21,10 @@ categories:
 마음대로 사용하고 싶어서 **GitHub 블로그**를 사용하게 되었다.
 
 ### Velog에 남겨둘 게시물
-- 42 Seoul Review
-- Web 관련 포스팅
-- 표준 C 라이브러리 구현
+- [42 Seoul Review](https://velog.io/@m2nja201/series/42SEOUL) 👈**HOT**
+- [Web 관련 포스팅](https://velog.io/@m2nja201/series/WEB)
+- [표준 C 라이브러리 구현](https://velog.io/@m2nja201/series/%ED%91%9C%EC%A4%80-C-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-ibc-%EA%B5%AC%ED%98%84)
+- [C/C++ 프로그래밍 문제](https://velog.io/@m2nja201/series/programming-cc)
+- [Trouble Shooting🔥](https://velog.io/@m2nja201/series/TroubleShooting) 👈**HOT**
 
 혹시라도 위의 내용을 확인하실 분들이 있다면 [**요기**](https://velog.io/@m2nja201/posts)로 오세용 :)
