@@ -4,6 +4,9 @@ excerpt: "가우시안 필터가 무엇인지, Gaussian Blur 함수는 어떻게
 
 toc: true
 toc_sticky: true
+
+categories:
+	- OpenCV
 ---
 
 ## 🌳 Gaussian Filter (가우시안 필터)

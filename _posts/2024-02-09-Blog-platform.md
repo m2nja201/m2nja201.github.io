@@ -3,6 +3,9 @@ title:  "Velog에서 GitHub Blog로 이전합니다!"
 
 toc: true
 toc_sticky: true
+
+categories:
+	- Pages
 ---
 
 기존에 사용하던 [**Velog**](https://velog.io/@m2nja201/posts)에서 **GitHub 블로그**로 이전하였다.
