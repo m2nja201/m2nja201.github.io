@@ -6,7 +6,7 @@ categories:
 tags:
 	- ComputerVision
 	- openCV
-last_modified_at: 2023-07-07 20:07:36 +09:00
+last_modified_at: 2023-07-07T20:07:36+09:00
 toc: true
 toc_sticky: true
 ---

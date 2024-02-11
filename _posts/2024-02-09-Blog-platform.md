@@ -5,7 +5,7 @@ categories:
 	- Setting
 tags:
     - Setting
-last_modified_at: 2024-02-09 20:07:36 +09:00
+last_modified_at: 2024-02-09T20:07:36+09:00
 
 toc: true
 toc_sticky: true
