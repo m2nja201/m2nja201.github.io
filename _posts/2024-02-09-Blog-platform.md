@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 
 categories:
-	- Pages
+  - Pages
 ---
 
 기존에 사용하던 [**Velog**](https://velog.io/@m2nja201/posts)에서 **GitHub 블로그**로 이전하였다.

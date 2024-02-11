@@ -6,7 +6,7 @@ toc : true
 toc_sticky: true
 
 categories:
-	- OpenCV
+  - OpenCV
 ---
 
 ## 👀 Sobel Filter
