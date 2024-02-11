@@ -17,7 +17,7 @@
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[1] == "OpenCV" %}
+                    {% if category[0] == "OpenCV" %}
                         <li><a href="/categories/computer-vision/open-cv" class="">OpenCV ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -25,7 +25,7 @@
         <span class="nav__sub-title">Paper Review</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[1] == "MultiModal" %}
+                    {% if category[0] == "MultiModal" %}
                         <li><a href="/categories/paper-review/multi-modal" class="">Multi-Modal ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
