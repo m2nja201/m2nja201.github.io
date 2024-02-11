@@ -113,7 +113,7 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
-    - label: "Website"
+    - label: "Velog"
       icon: "fas fa-fw fa-link"
       url: "https://velog.io/@m2nja201/posts"
     - label: "GitHub"
