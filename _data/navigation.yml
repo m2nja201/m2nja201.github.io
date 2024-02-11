@@ -2,6 +2,8 @@
 main:
   #- title: "Home"
   #  url: "/"
+  - title: "MyInfo"
+    url: "/about/"
   - title: "ComputerVision"
     url: "/categories/computer-vision"
     children:
