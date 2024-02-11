@@ -3,11 +3,13 @@ main:
   #- title: "Home"
   #  url: "/"
   - title: "ComputerVision"
+    url: "/categories/computer-vision"
     children:
     - title: "OpenCV"
       url: /categories/computer-vision/open-cv
       category: "OpenCV"
   - title: "PaperReview"
+    url: '/categories/paper-review'
     children:  
     - title: "MultiModal"
       url: "/categories/paper-review/multi-modal"
