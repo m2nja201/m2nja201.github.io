@@ -126,12 +126,14 @@ blockquote {
 /* links */
 
 a {
+  text-decoration: none;  
+
   &:focus {
     @extend %tab-focus;
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: rgb(0, 119, 88); // $link-color-visited
   }
 
   &:hover {
