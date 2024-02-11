@@ -266,6 +266,7 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_main: true
       last_modified_at: null
 
   # _pages                      : 해당 하단 영역이 새로 추가되었습니다.

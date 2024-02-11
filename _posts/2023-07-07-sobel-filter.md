@@ -2,9 +2,11 @@
 title:  "[openCV] Sobel Filter로 Edge 검출하기"
 excerpt: "소벨 필터가 무엇인지, Sobel 함수는 어떻게 활용하는지, Edge 검출은 어떻게 하는지에 대한 게시글입니다."
 
-
 toc : true
 toc_sticky: true
+
+categories:
+	- ComputerVision
 ---
 
 ## 👀 Sobel Filter
