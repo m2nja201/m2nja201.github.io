@@ -1,11 +1,11 @@
 ---
 title:  "Velog에서 GitHub Blog로 이전합니다!"
 
-last_modified_at: 2024-02-09 20:07:36 +09:00
 categories: 
 	- Setting
 tags:
     - Setting
+last_modified_at: 2024-02-09 20:07:36 +09:00
 ---
 
 기존에 사용하던 [**Velog**](https://velog.io/@m2nja201/posts)에서 **GitHub 블로그**로 이전하였다.

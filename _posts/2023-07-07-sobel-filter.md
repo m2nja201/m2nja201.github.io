@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "[openCV] Sobel Filter로 Edge 검출하기"
 
 categories: 
