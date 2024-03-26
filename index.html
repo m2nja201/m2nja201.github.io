@@ -1,4 +1,18 @@
 ---
+layout: archive
+sidebar_main: ture
+author_profile: true
+entries_layout: list
+---
+
+<div class="grid__wrapper">
+    {% for post in paginator.posts %}
+    {% include archive-single.html type="grid" %}
+    {% endfor %}
+</div>
+{% include paginator.html %} 
+
+<!---
 layout: home
 author_profile: true
----
+--->
