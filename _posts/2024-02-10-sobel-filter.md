@@ -8,6 +8,10 @@ toc_sticky: true
 categories:
   - ComputerVision 
   - OpenCV
+
+header:
+  teaser: https://github.com/m2nja201/m2nja201.github.io/assets/80443295/1bd1bcff-9fd6-4baa-bea2-dc94bf9e8e08
+  
 ---
 
 ## 👀 Sobel Filter

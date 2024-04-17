@@ -9,6 +9,8 @@ categories:
   - ComputerVision 
   - OpenCV
 
+header:
+  teaser: https://github.com/m2nja201/m2nja201.github.io/assets/80443295/7430df62-e59d-42a0-88b0-ee6af96f3ebd
 ---
 
 ## 🌳 Gaussian Filter (가우시안 필터)
