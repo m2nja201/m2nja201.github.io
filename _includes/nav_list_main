@@ -36,6 +36,9 @@
                     {% if category[0] == "Pages" %}
                         <li><a href="/categories/pages" class="">이것저것 ({{category[1].size}})</a></li>
                     {% endif %}
+                    {% if category[0] == "TrobleShooting" %}
+                        <li><a href="/categories/trouble-shooting" class="">Trouble-Shooting ({{category[1].size}})</a></li>
+                    {% endif %}
                 {% endfor %}
             </ul>
       </li>
