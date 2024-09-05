@@ -6,7 +6,6 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Pages 
   - TroubleShooting
 
 header:
