@@ -12,7 +12,9 @@ header:
 
 ## 👀 문제 상황
 **Docker 컨테이너** 내부에서 
+
 ![](https://github.com/user-attachments/assets/98638625-ae8e-42ec-bf1c-59492fa4c783)
+
 이렇게 ``conda create -n {env_name}``을 사용하여 **가상환경**을 만들었습니다.
 
 ![Image](https://github.com/user-attachments/assets/ae99df66-eafa-4c10-a90e-0700e52d26f5)
@@ -27,7 +29,7 @@ header:
 echo 'export PATH="/opt/conda/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
-2. **``conda init`` 실행
+2. **``conda init`` 실행**
 ```
 conda init bash
 exec bash
