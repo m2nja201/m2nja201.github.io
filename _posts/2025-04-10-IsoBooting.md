@@ -18,7 +18,7 @@ header:
 
 **Ubuntu 다운로드 웹페이지** 접속 : [https://ubuntu.com/downloads/desktop](https://ubuntu.com/downloads/desktop)
 
-<center><img src="https://i.ibb.co/xKGKt7BK/2025-04-11-3-05-40.png" width='700%' height='70%'></center>
+<center><img src="https://i.ibb.co/xKGKt7BK/2025-04-11-3-05-40.png" width='70%' height='70%'></center>
 
 
 먼저, <font style="color:hsl(0, 100.00%, 42.90%)">빨간색 네모 박스</font>가 있는 부분을 눌러 <strong>LTS 버전(장기 지원)</strong>을 설치합니다.
