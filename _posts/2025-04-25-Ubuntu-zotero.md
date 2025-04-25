@@ -1,5 +1,5 @@
 ---
-title:  "[Ubuntu] 간단하게 Ubuntu에 Zotero 최신버전 설치하기 (터미널 사용)
+title:  "[Ubuntu] 간단하게 Ubuntu에 Zotero 최신버전 설치하기 (터미널 사용)"
 excerpt: "Ubuntu에서 쉽고 빠르게 zotero 설치하는 방법에 대해 설명하였습니다."
 
 toc : true
