@@ -1,6 +1,6 @@
 ---
-title:  "[논문 리뷰] LLaVA :: Visual Instruction Tuning "
-excerpt: "LLaVA(Large Language and Vision Assistant)로 발표한 Visual Instruction Tuning 논문 리뷰"
+title:  "[논문 리뷰] Understading Hallucinations in Diffusion Models through Mode Interpolation"
+excerpt: "Diffusion에서 일어나는 hallucination에 대한 논문 리뷰"
 
 toc: true
 toc_sticky: true
@@ -16,30 +16,32 @@ header:
 
 ---
 
-> NeurIPS 2023 (2023.04.17.)  Haotian Liu, Chunyuan Li, Qingyang Wu, Yong Jae Lee
+> Aithal, Sumukh K and Maini, Pratyush and Lipton, Zachary C and Zico Kolter, J
 
-논문 <font style="color:hsl(27, 100%, 43%)">Visual Instruction Tuning</font>을 읽고, 
+논문 <font style="color:hsl(27, 100%, 43%)">Understanding Hallucinations in Diffusion Models through Mode Interpolation</font>을 읽고, 
 최대한 다른 분들이 보셨을 때 이해가 잘 되도록 요약 및 핵심 내용 설명 위주로 Paper Review를 진행할 예정입니다.
 
-본 논문은 11월 11일 기준 인용이 3605회 되었을 정도로 영향력이 높은 논문이며, 본 논문을 시작으로 다양한 후속 버전이 나왔지만, <font style="color:hsl(27, 100%, 43%)">LLaVA</font>에 대한 기본적인 개념과 <font style="color:hsl(27, 100%, 43%)">Visual instruction tuning</font>에 대해 말씀드리고자 리뷰를 하였습니다.
+본 논문은 현재 아카이브에 기재되어 있으며, 그동안의 Diffusion model에서의 **hallucination**에 대한 해결 방법으로 데이터 증강을 사용하거나 모델 크기를 키웠던 반면, 본 논문에서는 <font style="color:hsl(27, 100%, 43%)">Diffusion decoder에서 일어나는 mode interpolation 관점</font>으로 다루고 있어 소개해보았습니다.
 
 논문에서의 순서를 일정하게 지키는 것보다, 각 목차에서 필요할 것 같다 생각하는 부분을 먼저 언급하거나, 뒷 부분에서 언급할 수 있습니다. 보시고 피드백도 자유롭게 주셨으면 좋겠습니다!
 
 <br>
 
-## 🥸 Background
+## 🥸 Hallucination이란?
 
-### Instruction tuning이란 ?
+### Hallucination의 정의
 
-<font style="color:hsl(27, 100%, 43%)">Instruction tuning</font>이란, LLM이 특정 instruction을 이해하고, 그에 다라 다양한 task를 수행하도록 학습시키는 방법입니다.
+<font style="color:hsl(27, 100%, 43%)">Hallucination</font>이란, 훈련 데이터에서 한 번도 일어난 적 없던 샘플이 만들어지는 현상입니다. 모델이 생성한 샘플이 실제 데이터 분포의 지지집합(support) 밖에 완전히 위치하는 경우인 것이죠.
 
-FLAM(Wei, Jason, et al., 2021)에서 나온 개념으로, 다양한 데이터셋에 대한 **instruction으로 LLM을 fine-tuning**했을 때 unseen task에서의 **zero shot** 성능이 향상된 것을 확인할 수 있었습니다. 즉, instruction tuning을 통해 LLM이 instruction에 맞는 응답을 생성할 수 있도록 하는 것입니다.
+이러한 현상은 <font style="color:hsl(27, 100%, 43%)">mode interplation</font>이 발생할 때 생기는데, 본 논문에서는 diffusion 모델이 데이터 분포의 **인접한 두 mode 사이를 보간**하여 hallucination을 생성하는 경향이 있다는 것을 주장합니다.
 
 <center><img src="https://github.com/user-attachments/assets/8de81e01-638a-43bf-acac-6bfb57806c57" width="70%"></center>
 
 <br>
 
-### Instruction tuning과 Fine-tuning의 차이
+## 🔎 Mode Interpolation의 원인
+
+### Score Function의 분
 
 Instruction tuning은 fine-tuning과 비슷한 듯, 다른 개념입니다. 다양한 주제에 대한 **instruction-task 쌍**을 사용하여 학습하기 때문에, 다양한 작업에서도 zero shot이 가능합니다.
 
@@ -118,7 +120,6 @@ Context type 2. **Bounding boxes**
 
 <br>
 
-
 #### ✅ Instruction-following 데이터를 구성하기 위한 Response
 
 위 context를 통해 이미지(visual content)를 LLM이 인지할 수 있도록 인코딩 했다면, COCO 이미지를 사용하여 3가지 유형의 instruction-following 데이터를 생성합니다.
@@ -127,7 +128,6 @@ Response type 1. **Conversation**
 - user(사람)과 **assistant 간의 대화**를 디자인한 것입니다. assistant가 이미지를 보고 답변하는 것과 같이 구성되어 있습니다.
 - 물체 유형, 개수, 동작, 위치, 상대적 위치 등 이미지의 시각적 내용에 대한 확실한 답변이 있는 질문이 제기됩니다.
 - 다음은 생성된 conversation입니다.
-
 <center><img src="https://github.com/user-attachments/assets/2aeb4188-09ff-414b-a0a9-a78a0b5574ff" width="85%"></center>
 
 <p>
@@ -135,7 +135,6 @@ Response type 1. **Conversation**
 Response type 2. **Detailed description**
 - 이미지에 대한 **상세한 설명**을 생성합니다.
 - 다음 이미지의 질문 목록에서 하나의 질문을 무작위로 골라 GPT-4에게 이미지에 대한 자세한 설명을 생성하도록 요청합니다.
-
 <center><img src="https://github.com/user-attachments/assets/15f68471-3c4e-4711-a12c-a4890cb8285a" width="65%"></center>
 
 - 만들어진 description은 다음과 같습니다.
@@ -160,7 +159,7 @@ Response type 3. **Complex reasoning**
 
 <center><img src="https://github.com/user-attachments/assets/aeedb374-8f6d-4423-9bbc-1f59dcdd387a" width="75%"></center>
 
-- **Language model** : Vicuna ($ f_\phi $)
+- **Language model** : Vicuna ($$f_\phi$$)
 - **Vision encoder** : 사전 학습된 CLIP vision encoder ViT-L/14
 
 
