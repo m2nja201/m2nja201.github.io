@@ -19,3 +19,8 @@ search: false
 body {
     font-family: 'Noto Sans KR';
 }
+
+/* Add a little breathing room between sidebar category links. */
+#category_tag_menu > li > ul > li + li {
+    margin-top: 0.2rem;
+}

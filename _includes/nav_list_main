@@ -12,9 +12,11 @@
       <span class="nav__sub-title">Categories</span>
       <ul>
         {% for category in categories %}
+          {% assign category_name = category[0] %}
+          {% assign category_meta = site.data.category_meta[category_name] %}
           <li>
             <a href="{{ '/categories/' | relative_url }}#{{ category[0] | slugify }}">
-              {{ category[0] }} ({{ category[1].size }})
+              {% if category_meta.emoji %}{{ category_meta.emoji }} {% endif %}{{ category[0] }} ({{ category[1].size }})
             </a>
           </li>
         {% endfor %}
