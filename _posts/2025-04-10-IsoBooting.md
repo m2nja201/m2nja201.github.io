@@ -10,7 +10,7 @@ categories:
   - Ubuntu
 
 header:
-  teaser: https://i.ibb.co/6RHXppmk/thumbnails-1.png
+  teaser: /assets/images/ubuntu-thumbnail.png
   
 ---
 
@@ -61,4 +61,3 @@ header:
 만약 게이지가 초록색으로 꽉 차고, **``완료``** 상태가 되면 닫기로 꺼주시면 됩니다.
 
 -> 만들기 끝.
-

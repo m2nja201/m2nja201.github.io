@@ -9,7 +9,7 @@ categories:
   - Ubuntu
 
 header:
-  teaser: https://i.ibb.co/6RHXppmk/thumbnails-1.png
+  teaser: /assets/images/ubuntu-thumbnail.png
   
 ---
 

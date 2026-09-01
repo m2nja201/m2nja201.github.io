@@ -9,7 +9,7 @@ categories:
   - TroubleShooting
 
 header:
-  teaser: https://github.com/user-attachments/assets/7b8283f1-f352-4324-817f-b58513129245
+  teaser: /assets/images/ubuntu-trouble.png
 
 ---
 나의 **대멘붕 상황**을 공유하며, 나와 같은 어리석은 짓은 하지 않도록 해결 방법을 나누고 싶었다...

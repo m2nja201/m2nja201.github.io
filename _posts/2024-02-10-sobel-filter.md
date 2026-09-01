@@ -10,7 +10,7 @@ categories:
   - OpenCV
 
 header:
-  teaser: https://github.com/m2nja201/m2nja201.github.io/assets/80443295/1bd1bcff-9fd6-4baa-bea2-dc94bf9e8e08
+  teaser: /assets/images/sobel-filter.png
   
 ---
 
@@ -136,4 +136,3 @@ for (int y = 0; y < height; y++) {
 	}
 ```
 ![](https://velog.velcdn.com/images/m2nja201/post/9613e25d-0c79-4825-82d3-f06cb85bccd4/image.png)
-

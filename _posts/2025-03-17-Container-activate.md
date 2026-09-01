@@ -6,7 +6,7 @@ toc : true
 toc_sticky: true
 
 header:
-  teaser: https://github.com/user-attachments/assets/094e4769-505b-40bb-8568-65612bdceaad
+  teaser: /assets/images/container-activate.png
   
 ---
 
